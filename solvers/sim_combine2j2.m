@@ -1,9 +1,10 @@
 function sim_combine2j2()
 clear global; close all;
+format long
 %dbstop if warning; dbstop if error;
 %%%% Generating map structure
-addpath(genpath('~/work2017/solvers/'));
-addpath(genpath('~/work2017/model_v2'));
+addpath(genpath(fullfile(pwd,'../solvers')));
+addpath(genpath(fullfile(pwd,'../model_v2')));
 global NGATES
 global MODE CONST 
 global iterMethod

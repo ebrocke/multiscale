@@ -1,4 +1,9 @@
 function plotme(refsol_path)
+addpath(genpath(fullfile(pwd,'../../refsol/ode15s_v3/')))
+addpath(genpath(fullfile(pwd,'../../../createfigures/')))
+if nargin < 1
+  refsol_path='';
+end
 [sr_err, sr_calls] = read_multirate_datapoints('BDF2_DEF.BDF2_DEF.3.GSCELLFirst_v3', 'slow', refsol_path);
 [mr_err, mr_calls] = read_multirate_datapoints('BDF2_DEF.BDF2_DEF.3.GSFastFirst_v3', 'slow', refsol_path);
   
