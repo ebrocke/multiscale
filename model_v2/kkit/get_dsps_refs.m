@@ -1,0 +1,13 @@
+function refs = get_dsps_refs(WITHPUMP)
+refs= {@get_dca, @get_draf, @get_daraf, @get_dmapk, @get_dmapk_araf, ...
+    @get_dpmapk, @get_dphsph, @get_dpmapk_phsph, ...
+    @get_dka, @get_dka_pmapk, @get_dpka, ...
+    @get_dpkc, @get_dapkc, @get_daa,...
+    @get_dapc_pmapk, @get_dmapk_apkc};
+nrefs = length(refs);
+if WITHPUMP
+    refs{1} = @get_dca_pump;
+    refs{nrefs+1} = @get_dpmca;
+    refs{nrefs+2} = @get_dpmcaCa;
+end
+end
