@@ -3,8 +3,9 @@ clear global; close all;
 format long
 %dbstop if warning; dbstop if error;
 %%%% Generating map structure
+MODEL = 'model_v3';
 addpath(genpath(fullfile(pwd,'../solvers')));
-addpath(genpath(fullfile(pwd,'../model_v2')));
+addpath(genpath(fullfile(pwd,'../',MODEL)));
 global NGATES
 global MODE CONST 
 global iterMethod
@@ -15,7 +16,7 @@ CONST = load('modelconst.mat');
 %%%% Initiate solvers
 organization = ...              % Organization for solve decoupled systems
     {'Jac','GSCELLFirst','GSERKFirst','GSSlowFirst','GSFastFirst'};
-iterMethod = organization{5};
+iterMethod = organization{4};
 
 %%%% Chosing solver parameters
 multirate = true;
