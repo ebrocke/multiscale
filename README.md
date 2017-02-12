@@ -6,7 +6,7 @@
 				Hierarchy of folders
 ################################################################################
 .
-├── createfigures	:	contains scripts for reading and plotting the results. See 'data' folder.
+├── createfigures	:	contains scripts for reading and plotting the results. See plotme.m scripts in the data folder.
 │   ├── createfigure.m
 │   └── read_multirate_datapoints.m
 ├── data	:	contains *.mat object data files to generate figures in [1,2]. Each subfolder contains plotme.m script to generate the figure.
